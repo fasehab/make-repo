@@ -1,0 +1,14 @@
+---
+title: "Game Scores"
+format: html
+---
+
+```{r}
+#| message: false
+#| warning: false
+library(tidyverse)
+```
+
+```{r}
+games <- read_csv("Games.csv")
+```
