@@ -9,8 +9,9 @@ format:
 #| message: false
 #| warning: false
 #| echo: false
-#| fig-width: 9
-#| fig-height: 9
+#| fig-width: 6
+#| fig-height: 6
+#| out-width: "500px"
 library(tidyverse)
 
 games <- read_csv("Games.csv") %>%
@@ -20,10 +21,10 @@ games_counts <- games %>%
   count(homeScore, awayScore)
 
 ggplot(games_counts, aes(x = homeScore, y = awayScore, color = n)) +
-  geom_point(alpha = 0.6, size = 1.2) +
+  geom_point(alpha = 0.6, size = 1.0) +
   scale_color_viridis_c(option = "plasma", trans = "log10", name = "Frequency (log scale)") +
   geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "gray50", linewidth = 0.8) +
-  theme_minimal(base_size = 15) +
+  theme_minimal(base_size = 12) +
   labs(
     title = "NBA Home vs. Away Scores",
     subtitle = "Home team advantage shifts the mass of games slightly below the 45-degree line\n(where Home Score > Away Score)",
@@ -32,13 +33,13 @@ ggplot(games_counts, aes(x = homeScore, y = awayScore, color = n)) +
     y = "Away Team Score"
   ) +
   theme(
-    plot.title = element_text(face = "bold", size = 18, margin = margin(b = 6)),
-    plot.subtitle = element_text(color = "gray30", size = 12, margin = margin(b = 12), lineheight = 1.2),
-    plot.caption = element_text(color = "gray50", size = 10, margin = margin(t = 12)),
+    plot.title = element_text(face = "bold", size = 14, margin = margin(b = 6)),
+    plot.subtitle = element_text(color = "gray30", size = 10, margin = margin(b = 12), lineheight = 1.2),
+    plot.caption = element_text(color = "gray50", size = 8, margin = margin(t = 12)),
     panel.grid.minor = element_blank(),
     legend.position = "right",
-    legend.title = element_text(size = 11, face = "bold"),
-    legend.text = element_text(size = 10)
+    legend.title = element_text(size = 9, face = "bold"),
+    legend.text = element_text(size = 8)
   ) +
   coord_fixed()
 ```
