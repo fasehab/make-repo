@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>scores</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #0b0f19;
+    color: #f8fafc;
+    margin: 0;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    max-width: 600px;
+    width: 100%;
+    background-color: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.025em;
+    background: linear-gradient(to right, #6366f1, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .lead {
+    font-size: 1rem;
+    color: #94a3b8;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  
+  .plot-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .plot-wrapper img {
+    border-radius: 12px;
+    border: 1px solid #1e293b;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+  
+  .description {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    border-top: 1px solid #1e293b;
+    padding-top: 1.5rem;
+  }
+  
+  .description p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .description p:last-child {
+    margin-bottom: 0;
+  }
+  
+  strong {
+    color: #f1f5f9;
+    font-weight: 600;
+  }
+</style>
+<div class="container">
+<h1>
+NBA Scorigami Analysis
+</h1>
+<div class="lead">
+Exploring historical NBA score distributions and the home court edge.
+</div>
+<div class="plot-wrapper">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img src="scores_files/figure-html/unnamed-chunk-1-1.png" width="500"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="description">
+<p>
+<strong>Scorigami</strong> is a concept developed by sportswriter Jon Bois to track every unique final score combination that has occurred in a league’s history. While originally popularized for the NFL, this chart maps the distribution of historical final scores in the NBA.
+</p>
+<p>
+The diagonal dashed line represents a tie (equal home and away scores). Because NBA games cannot end in a tie, this boundary line remains empty.
+</p>
+<p>
+Notably, the core yellow/orange mass of final scores is shifted slightly <strong>below the diagonal line</strong> (meaning the home score is greater than the away score). This visual skew captures the historical <strong>Home Team Advantage</strong>, showing that home teams consistently outscore away teams across league history.
+</p>
+</div>
+</div>
+
+
+
+
+
+</body></html>
